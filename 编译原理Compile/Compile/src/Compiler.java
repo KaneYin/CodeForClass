@@ -2,14 +2,9 @@ public class Compiler {
 
     private String[] keyWords= new String[]{"void","main","int","char","if","else","for","while"};
 
-    //设定语言的关键字
-    public void setKeyWords(String[] keyWords) {
-        this.keyWords = keyWords;
-    }
-
     //方法将输入输入的字符串转换为字符数组
     public String[] strToArr(String input){
-        String[] stringArray = input.split("[ \n]+");
+        String[] stringArray = input.split("[ \r\n]+");
         return stringArray;
     }
 
@@ -37,8 +32,15 @@ public class Compiler {
                 System.out.println("(*,203)");
                 
             } else if (strArr[index].charAt(0) == '/') {
-                System.out.println("(/,204)");
 
+                //判断是否是一个注释块
+                if(strArr[index].equals("/*")){
+                    do {
+                        index++;
+                    } while (!strArr[index].equals("*/"));
+                }else{
+                    System.out.println("(/,204)");
+                }
             } else if (strArr[index].charAt(0) == '=') {
                 if (strArr[index].equals("==")){
                     System.out.println("(==,210)");
@@ -77,8 +79,14 @@ public class Compiler {
                  */
 
                 if(!isKey(strArr[index])){
+                    /*
+                    不是关键字,将标识符打印出来
+                     */
                     System.out.println("(" + strArr[index] + ",400)");
                 }else {
+                    /*
+                    是关键字,将关键字打印出来
+                     */
                     for (int i = 0; i < keyWords.length; i++) {
                         if (strArr[index].equals(keyWords[i])) {
                             result = 101 + i;
@@ -90,6 +98,8 @@ public class Compiler {
 
             }else if(strArr[index].charAt(0) >= '0' && strArr[index].charAt(0) <= '9'){
                 System.out.println("(" + strArr[index] + ",500)");
+            }else{
+                System.out.println("error");
             }
         }
     }
@@ -105,6 +115,7 @@ public class Compiler {
         }
     }
 
+    //如果字符串是一个关键字,返回真
     public boolean isKey(String str){
         for (int i = 0; i < keyWords.length; i++) {
             if(str.equals(keyWords[i])){
