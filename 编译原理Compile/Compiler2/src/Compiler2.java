@@ -50,10 +50,11 @@ public class Compiler2 {
         analysisTable[4][5] = "H->ε";
         analysisTable[4][6] = "H->ε";
         analysisTable[5][1] = "F->i";
-        analysisTable[5][6] = "F->(E)";
+        analysisTable[5][4] = "F->(E)";
     }
 
     public void analysis(){
+        System.out.println("stack\tinput\t");
         stack.push('$');
         stack.push('E');
         //查看当前栈顶元素,用变量character接收
@@ -66,16 +67,31 @@ public class Compiler2 {
             String str2 = new String(terminal);
             int j = str2.indexOf(input.charAt(id)) + 1;
 
-            if(character == input.charAt(id)){
+            System.out.print(stack.toString()+"\t\t");
+            //只输出待分析的字符串
+            for (int index = id; index < input.length(); index++) {
+                System.out.print(input.charAt(index));
+            }
+            System.out.print("\t\t");
+
+            if(character == input.charAt(id)) {
                 stack.pop();
                 id++;
                 System.out.println("匹配");
+            } else if (i <= 0 || j <= 0) {
+                //如果当前M[X,a]空白,说明M[X,a]是一个报错条目
+                System.out.println("错误,忽略当前字符");
+                //抛弃一个输入记号,直到能够匹配为止
+                id++;
             } else if (isTerminal(character)) {
                 //如果当前是终结符,但是没有匹配,表示语法分析错误
-                System.out.println("错误");
+                System.out.println("错误,忽略当前字符");
+                id++;
             } else if (analysisTable[i][j].equals(null)) {
                 //如果当前M[X,a]空白,说明M[X,a]是一个报错条目
-                System.out.println("错误");
+                System.out.println("错误,忽略当前字符");
+                //抛弃一个输入记号,直到能够匹配为止
+                id++;
             } else if(!analysisTable[i][j].equals(null)){
                 System.out.println(analysisTable[i][j]);
                 stack.pop();
@@ -114,4 +130,6 @@ public class Compiler2 {
     public boolean isEmpty(Character character){
         return character == 'ε';
     }
+
+
 }
