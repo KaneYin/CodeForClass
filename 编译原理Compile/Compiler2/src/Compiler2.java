@@ -11,10 +11,9 @@ import java.util.Stack;
  * T' -> *FT'|ε
  */
 public class Compiler2 {
-
     //输入字符指针
     private int id = 0;
-
+    public boolean flag = true;
     /**
      * 终结符字符串
      */
@@ -25,7 +24,6 @@ public class Compiler2 {
      * E' => G      T' => H
      */
     char[] nonterminal = new char[]{'E','G','T','H','F'};
-
     private int row = nonterminal.length;
     private int colomn = terminal.length;
     String[][] analysisTable = new String[row + 1][colomn + 1];
@@ -33,11 +31,19 @@ public class Compiler2 {
     private Stack<Character> stack = new Stack<Character>();
 
     private String input = new String();
+
     /**
+     * 给analysisTable初始化,防止在出现错误时因为引用了未初始化的变量而抛出异常
      * 根据分析表内容,给analysisTable赋初值
      * E' => G      T' => H
      */
     public void initAnalysisTable(){
+
+        for (int i = 0; i < analysisTable.length; i++) {
+            for (int j = 0; j < analysisTable[i].length; j++) {
+                analysisTable[i][j] = "";
+            }
+        }
         analysisTable[1][1] = "E->TG";
         analysisTable[1][4] = "E->TG";
         analysisTable[2][2] = "G->+TG";
@@ -52,7 +58,6 @@ public class Compiler2 {
         analysisTable[5][1] = "F->i";
         analysisTable[5][4] = "F->(E)";
     }
-
     public void analysis(){
         System.out.println("stack\tinput\t");
         stack.push('$');
@@ -83,16 +88,19 @@ public class Compiler2 {
                 System.out.println("错误,忽略当前字符");
                 //抛弃一个输入记号,直到能够匹配为止
                 id++;
+                flag = false;
             } else if (isTerminal(character)) {
                 //如果当前是终结符,但是没有匹配,表示语法分析错误
                 System.out.println("错误,忽略当前字符");
                 id++;
-            } else if (analysisTable[i][j].equals(null)) {
+                flag = false;
+            } else if (analysisTable[i][j].length() == 0) {
                 //如果当前M[X,a]空白,说明M[X,a]是一个报错条目
                 System.out.println("错误,忽略当前字符");
                 //抛弃一个输入记号,直到能够匹配为止
                 id++;
-            } else if(!analysisTable[i][j].equals(null)){
+                flag = false;
+            } else if(analysisTable[i][j].length() != 0){
                 System.out.println(analysisTable[i][j]);
                 stack.pop();
                 char[] temp = analysisTable[i][j].substring(3).toCharArray();
@@ -105,11 +113,10 @@ public class Compiler2 {
                 }
             }
         }
-        if(character == '$'){
+        if(character == '$' && flag){
             System.out.println("接受,语法分析结束");
         }
     }
-
     /**
      * 判断某个字符是不是终结符
      */
@@ -121,7 +128,6 @@ public class Compiler2 {
         }
         return false;
     }
-
     public void setInput(){
         System.out.println("请输入待分析的字符串:");
         Scanner sc = new Scanner(System.in);
@@ -130,6 +136,4 @@ public class Compiler2 {
     public boolean isEmpty(Character character){
         return character == 'ε';
     }
-
-
 }
