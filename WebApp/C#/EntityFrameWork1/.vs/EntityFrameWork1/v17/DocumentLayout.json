@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Code\\C#\\EntityFrameWork1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{910364BB-92D7-4F85-A671-D5A15F2AAA6B}|EntityFrameWork1.csproj|c:\\code\\c#\\entityframework1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{910364BB-92D7-4F85-A671-D5A15F2AAA6B}|EntityFrameWork1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Code\\C#\\EntityFrameWork1\\DatabaseModels\\_2114010313DbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DatabaseModels\\_2114010313DbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{910364BB-92D7-4F85-A671-D5A15F2AAA6B}|EntityFrameWork1.csproj|c:\\code\\c#\\entityframework1\\entityframework1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{910364BB-92D7-4F85-A671-D5A15F2AAA6B}|EntityFrameWork1.csproj|solutionrelative:entityframework1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EntityFrameWork1",
+              "DocumentMoniker": "C:\\Code\\C#\\EntityFrameWork1\\EntityFrameWork1.csproj",
+              "RelativeDocumentMoniker": "EntityFrameWork1.csproj",
+              "ToolTip": "C:\\Code\\C#\\EntityFrameWork1\\EntityFrameWork1.csproj",
+              "RelativeToolTip": "EntityFrameWork1.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-24T10:16:43.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Code\\C#\\EntityFrameWork1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Code\\C#\\EntityFrameWork1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAO4AAAAAAAAAAAAmwPcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T10:14:43.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_2114010313DbContext.cs",
+              "DocumentMoniker": "C:\\Code\\C#\\EntityFrameWork1\\DatabaseModels\\_2114010313DbContext.cs",
+              "RelativeDocumentMoniker": "DatabaseModels\\_2114010313DbContext.cs",
+              "ToolTip": "C:\\Code\\C#\\EntityFrameWork1\\DatabaseModels\\_2114010313DbContext.cs",
+              "RelativeToolTip": "DatabaseModels\\_2114010313DbContext.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAA7wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T10:17:52.908Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
