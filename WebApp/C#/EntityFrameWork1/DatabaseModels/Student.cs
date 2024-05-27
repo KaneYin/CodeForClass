@@ -12,4 +12,6 @@ public partial class Student
     public string? StudentClass { get; set; }
 
     public string? InitPassword { get; set; }
+
+    public virtual ICollection<Course> Courses { get; set; } = new List<Course>();
 }

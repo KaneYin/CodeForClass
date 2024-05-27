@@ -18,7 +18,7 @@ public partial class _2114010313DbContext : DbContext
 
     public virtual DbSet<Course> Courses { get; set; }
 
-    public virtual DbSet<Stucourse> Stucourses { get; set; }
+    public virtual DbSet<Stucourse1> Stucourse1s { get; set; }
 
     public virtual DbSet<Student> Students { get; set; }
 
@@ -44,32 +44,20 @@ public partial class _2114010313DbContext : DbContext
             entity.Property(e => e.CourseName).HasMaxLength(10);
         });
 
-        modelBuilder.Entity<Stucourse>(entity =>
+        modelBuilder.Entity<Stucourse1>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("stucourse", tb => tb.HasComment("courses that students have selected"));
+            entity.HasKey(e => new { e.StudentId, e.CourseId })
+                .HasName("PRIMARY")
+                .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
 
-            entity.HasIndex(e => e.CourseId, "stucourse_course_CourseID_fk");
+            entity.ToTable("stucourse1");
 
-            entity.HasIndex(e => e.StudentId, "stucourse_student_StudentID_fk");
-
-            entity.Property(e => e.CourseId)
-                .HasMaxLength(20)
-                .HasColumnName("CourseID");
             entity.Property(e => e.StudentId)
                 .HasMaxLength(20)
                 .HasColumnName("StudentID");
-
-            entity.HasOne(d => d.Course).WithMany()
-                .HasForeignKey(d => d.CourseId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("stucourse_course_CourseID_fk");
-
-            entity.HasOne(d => d.Student).WithMany()
-                .HasForeignKey(d => d.StudentId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("stucourse_student_StudentID_fk");
+            entity.Property(e => e.CourseId)
+                .HasMaxLength(20)
+                .HasColumnName("courseID");
         });
 
         modelBuilder.Entity<Student>(entity =>
@@ -84,6 +72,32 @@ public partial class _2114010313DbContext : DbContext
             entity.Property(e => e.InitPassword).HasMaxLength(10);
             entity.Property(e => e.StudentClass).HasMaxLength(10);
             entity.Property(e => e.StudentName).HasMaxLength(10);
+
+            entity.HasMany(d => d.Courses).WithMany(p => p.Students)
+                .UsingEntity<Dictionary<string, object>>(
+                    "Stucourse",
+                    r => r.HasOne<Course>().WithMany()
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("stucourse_course_CourseID_fk"),
+                    l => l.HasOne<Student>().WithMany()
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.ClientSetNull)
+                        .HasConstraintName("stucourse_student_StudentID_fk"),
+                    j =>
+                    {
+                        j.HasKey("StudentId", "CourseId")
+                            .HasName("PRIMARY")
+                            .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+                        j.ToTable("stucourse");
+                        j.HasIndex(new[] { "CourseId" }, "stucourse_course_CourseID_fk");
+                        j.IndexerProperty<string>("StudentId")
+                            .HasMaxLength(20)
+                            .HasColumnName("studentID");
+                        j.IndexerProperty<string>("CourseId")
+                            .HasMaxLength(20)
+                            .HasColumnName("courseID");
+                    });
         });
 
         OnModelCreatingPartial(modelBuilder);
