@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace LogInDemo.Models;
+
+public partial class Student
+{
+    public string StudentId { get; set; } = null!;
+
+    public string? StudentName { get; set; }
+
+    public string? StudentClass { get; set; }
+
+    public string? InitPassword { get; set; }
+
+    public virtual ICollection<Course> Courses { get; set; } = new List<Course>();
+}

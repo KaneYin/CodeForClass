@@ -1,0 +1,60 @@
+﻿@using LogInDemo.Models;
+@model Student
+@{
+    Layout = "_Layout2";
+}
+
+<header class="panel-heading">
+    <div class="panel-actions">
+    </div>
+    <h2 class="panel-title">学生添加详细页面</h2>
+</header>
+<div class="panel-body">
+    <form class="form-horizontal form-bordered" method="get" action="@Url.Action("StudentInfoAdd","StudentInfo")">
+        <div class="form-group">
+            <label class="col-md-3 control-label">学生ID</label>
+            <div class="col-md-6">
+                <input type="text" value="@Model?.StudentId" name="StudentID" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-3 control-label" for="inputDefault">学生名称</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" value="@Model?.StudentName" name="StudentName" id="inputDefault">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-3 control-label" for="inputDefault">学生班级</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" value="@Model?.StudentClass" name="StudentClass" id="inputDefault">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-3 control-label" for="inputDefault">学生初始密码</label>
+            <div class="col-md-6">
+                <input type="text" class="form-control" value="@Model?.InitPassword" name="InitPassword" id="inputDefault">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <button type="submit" class="mb-xs mt-xs mr-xs btn btn-primary">保存</button>
+                    </div>
+                    <div class="visible-xs mb-md"></div>
+                    <div class="col-sm-3">
+                        <button type="button" onclick="location.href='/Course/ShowAllCourse'" class="mb-xs mt-xs mr-xs btn btn-default">返回</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>
+
+

@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Code\\C#\\LogInDemo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C91A9C33-2AEC-4E41-ABCE-8DAD80340E80}|LogInDemo.csproj|c:\\code\\c#\\logindemo\\views\\studentinfo\\addstudentinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C91A9C33-2AEC-4E41-ABCE-8DAD80340E80}|LogInDemo.csproj|solutionrelative:views\\studentinfo\\addstudentinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C91A9C33-2AEC-4E41-ABCE-8DAD80340E80}|LogInDemo.csproj|c:\\code\\c#\\logindemo\\views\\studentinfo\\showstudentinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C91A9C33-2AEC-4E41-ABCE-8DAD80340E80}|LogInDemo.csproj|solutionrelative:views\\studentinfo\\showstudentinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C91A9C33-2AEC-4E41-ABCE-8DAD80340E80}|LogInDemo.csproj|c:\\code\\c#\\logindemo\\views\\home\\showlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C91A9C33-2AEC-4E41-ABCE-8DAD80340E80}|LogInDemo.csproj|solutionrelative:views\\home\\showlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C91A9C33-2AEC-4E41-ABCE-8DAD80340E80}|LogInDemo.csproj|c:\\code\\c#\\logindemo\\views\\shared\\_layout2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C91A9C33-2AEC-4E41-ABCE-8DAD80340E80}|LogInDemo.csproj|solutionrelative:views\\shared\\_layout2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 239,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout2.cshtml",
+              "DocumentMoniker": "C:\\Code\\C#\\LogInDemo\\Views\\Shared\\_Layout2.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout2.cshtml",
+              "ToolTip": "C:\\Code\\C#\\LogInDemo\\Views\\Shared\\_Layout2.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout2.cshtml",
+              "ViewState": "AQIAABQBAAAAAAAAAMBSwBUBAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-28T13:04:47.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ShowLogin.cshtml",
+              "DocumentMoniker": "C:\\Code\\C#\\LogInDemo\\Views\\Home\\ShowLogin.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\ShowLogin.cshtml",
+              "ToolTip": "C:\\Code\\C#\\LogInDemo\\Views\\Home\\ShowLogin.cshtml",
+              "RelativeToolTip": "Views\\Home\\ShowLogin.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGAAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-28T12:03:47.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ShowStudentInfo.cshtml",
+              "DocumentMoniker": "C:\\Code\\C#\\LogInDemo\\Views\\StudentInfo\\ShowStudentInfo.cshtml",
+              "RelativeDocumentMoniker": "Views\\StudentInfo\\ShowStudentInfo.cshtml",
+              "ToolTip": "C:\\Code\\C#\\LogInDemo\\Views\\StudentInfo\\ShowStudentInfo.cshtml",
+              "RelativeToolTip": "Views\\StudentInfo\\ShowStudentInfo.cshtml",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAAAHEAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-21T13:33:24.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddStudentInfo.cshtml",
+              "DocumentMoniker": "C:\\Code\\C#\\LogInDemo\\Views\\StudentInfo\\AddStudentInfo.cshtml",
+              "RelativeDocumentMoniker": "Views\\StudentInfo\\AddStudentInfo.cshtml",
+              "ToolTip": "C:\\Code\\C#\\LogInDemo\\Views\\StudentInfo\\AddStudentInfo.cshtml",
+              "RelativeToolTip": "Views\\StudentInfo\\AddStudentInfo.cshtml",
+              "ViewState": "AQIAABwAAAAAAAAAAAAIwDwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-21T04:03:00.257Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
