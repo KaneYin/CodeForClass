@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS事件-常见事件</title>
+
+
+</head>
+
+<body onload="load()">
+    <form action="" style="text-align: center;" onsubmit="subfn()">
+
+        <input type="text" name="username" onblur="bfn()" onfocus="ffn()" onkeydown="kfn()">
+
+        <input id="b1" type="submit" value="submit">
+
+        <input id="b2" type="button" value="click me" onclick="cfn()">
+
+        <br>
+        <br>
+        <br>
+
+        <table width="800px" border="1" cellspacing="0" align="center" onmouseover="over()" onmouseout="out()">
+            <tr>
+                <th>学号</th>
+                <th>姓名</th>
+                <th>分数</th>
+                <th>评语</th>
+            </tr>
+            <tr align="center">
+                <td>001</td>
+                <td>张三</td>
+                <td>89</td>
+                <td>优秀</td>
+            </tr>
+            <tr align="center">
+                <td>001</td>
+                <td>张三</td>
+                <td>89</td>
+                <td>优秀</td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+<script>
+    // onload: 页面/元素 加载完成以后触发
+    function load(){
+        window.console.log("load complete");
+    }
+
+    // onsubmit: 提交表单事件
+    function subfn(){
+        alert("submit complete");
+    }
+
+    // onblur: 元素失去焦点事件
+    function bfn(){
+        window.console.log("onblur complete");
+    }
+
+    // onfocus: 元素获得焦点
+    function ffn(){
+        window.console.log("onfocus complete");
+    }
+
+    // onkeydown: 键盘被按下的事件
+    function kfn(){
+        window.console.log("keyboard pressed");
+    }
+
+    // onclick: 按钮被点击
+    function cfn(){
+        window.console.log("click complete");
+    }
+
+    // onmousemout: 鼠标移出
+    function out(){
+        window.console.log("mouse move out");
+    }
+
+    // onmouseover: 鼠标移入
+    function over(){
+        window.console.log("mouse move in")
+    }
+
+</script>
+
+
+</html>
