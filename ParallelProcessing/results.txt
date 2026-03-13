@@ -1,0 +1,80 @@
+program=par_pi, N=1048576, P=128, nodes=4, ntasks_per_node=32, combo=a
+pi is approximately 3.1415926535897891, Error is 0.0000000000000040
+
+program=par_pi, N=1048576, P=128, nodes=9, ntasks_per_node=15, combo=b
+pi is approximately 3.1415926535897891, Error is 0.0000000000000040
+
+program=par_pi, N=1048576, P=1, nodes=1, ntasks_per_node=1, combo=a
+pi is approximately 3.1415926535897891, Error is 0.0000000000000040
+
+program=par_pi, N=1048576, P=256, nodes=8, ntasks_per_node=32, combo=a
+pi is approximately 3.1415926535897891, Error is 0.0000000000000040
+
+program=par_pi, N=1048576, P=256, nodes=9, ntasks_per_node=29, combo=b
+pi is approximately 3.1415926535897891, Error is 0.0000000000000040
+
+program=par_pi, N=1048576, P=32, nodes=1, ntasks_per_node=32, combo=a
+pi is approximately 3.1415926535897891, Error is 0.0000000000000040
+
+program=par_pi, N=1048576, P=32, nodes=9, ntasks_per_node=4, combo=b
+pi is approximately 3.1415926535897891, Error is 0.0000000000000040
+
+program=par_pi, N=1048576, P=8, nodes=1, ntasks_per_node=8, combo=a
+pi is approximately 3.1415926535897891, Error is 0.0000000000000040
+
+program=par_pi, N=1048576, P=8, nodes=8, ntasks_per_node=1, combo=b
+pi is approximately 3.1415926535897891, Error is 0.0000000000000040
+
+program=par_pi, N=67108864, P=128, nodes=4, ntasks_per_node=32, combo=a
+pi is approximately 3.1415926535910144, Error is 0.0000000000012212
+
+program=par_pi, N=67108864, P=128, nodes=9, ntasks_per_node=15, combo=b
+pi is approximately 3.1415926535910144, Error is 0.0000000000012212
+
+program=par_pi, N=67108864, P=1, nodes=1, ntasks_per_node=1, combo=a
+pi is approximately 3.1415926535910144, Error is 0.0000000000012212
+
+program=par_pi, N=67108864, P=256, nodes=8, ntasks_per_node=32, combo=a
+pi is approximately 3.1415926535910144, Error is 0.0000000000012212
+
+program=par_pi, N=67108864, P=256, nodes=9, ntasks_per_node=29, combo=b
+pi is approximately 3.1415926535910144, Error is 0.0000000000012212
+
+program=par_pi, N=67108864, P=32, nodes=1, ntasks_per_node=32, combo=a
+pi is approximately 3.1415926535910144, Error is 0.0000000000012212
+
+program=par_pi, N=67108864, P=32, nodes=9, ntasks_per_node=4, combo=b
+pi is approximately 3.1415926535910144, Error is 0.0000000000012212
+
+program=par_pi, N=67108864, P=8, nodes=1, ntasks_per_node=8, combo=a
+pi is approximately 3.1415926535910144, Error is 0.0000000000012212
+
+program=par_pi, N=67108864, P=8, nodes=8, ntasks_per_node=1, combo=b
+pi is approximately 3.1415926535910144, Error is 0.0000000000012212
+
+program=par_pi, N=8388608, P=128, nodes=4, ntasks_per_node=32, combo=a
+pi is approximately 3.1415926535893650, Error is 0.0000000000004281
+
+program=par_pi, N=8388608, P=128, nodes=9, ntasks_per_node=15, combo=b
+pi is approximately 3.1415926535893650, Error is 0.0000000000004281
+
+program=par_pi, N=8388608, P=1, nodes=1, ntasks_per_node=1, combo=a
+pi is approximately 3.1415926535893650, Error is 0.0000000000004281
+
+program=par_pi, N=8388608, P=256, nodes=8, ntasks_per_node=32, combo=a
+pi is approximately 3.1415926535893650, Error is 0.0000000000004281
+
+program=par_pi, N=8388608, P=256, nodes=9, ntasks_per_node=29, combo=b
+pi is approximately 3.1415926535893650, Error is 0.0000000000004281
+
+program=par_pi, N=8388608, P=32, nodes=1, ntasks_per_node=32, combo=a
+pi is approximately 3.1415926535893650, Error is 0.0000000000004281
+
+program=par_pi, N=8388608, P=32, nodes=9, ntasks_per_node=4, combo=b
+pi is approximately 3.1415926535893650, Error is 0.0000000000004281
+
+program=par_pi, N=8388608, P=8, nodes=1, ntasks_per_node=8, combo=a
+pi is approximately 3.1415926535893650, Error is 0.0000000000004281
+
+program=par_pi, N=8388608, P=8, nodes=8, ntasks_per_node=1, combo=b
+pi is approximately 3.1415926535893650, Error is 0.0000000000004281
